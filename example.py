@@ -1,46 +1,46 @@
-class Glass:
-    def __init__(self, capacity_volume: int, occupied_volume: int):
+class Building:
+    def __init__(self, number_of_apartments: int, number_of_floors: int, first_floor_area: float, number_of_residents: dict):
         """
-        Создание и подготовка к работе объекта "Стакан"
+        Создание и подготовка к работе объекта "Здание"
 
-        :param capacity_volume: Объем стакана
-        :param occupied_volume: Объем занимаемой жидкости
+        :param number_of_apartments: Количество квартир
+        :param number_of_floors: Количество этажей
+        :param first_floor_area: Площадь первого этажа
+        :param number_of_residents: Количество жителей в квартирах
+        
         """
-        self.capacity_volume = capacity_volume
-        self.occupied_volume = occupied_volume
+        self.number_of_apartments = number_of_apartments
+        self.number_of_floors = number_of_floors
+        self.first_floor_area = first_floor_area
+        self.number_of_residents = first_floor_area
 
-    def is_glass(self) -> bool:
+    def heiht_of_building(self) -> float:
         """
-        Функция которая проверяет является ли словарь стаканом
+        Функция которая считает высоту здания
 
-        :return: Является ли объект стаканом или нет
-        """
-        ...
-
-    def add_water_to_glass(self, water: int) -> int:
-        """
-        Добавление воды в стакан.
-
-        Если количество добавляемой жидкости превышает доступное место,
-        то возвращается количество непоместившейся жидкости
-
-        :param water: Объем добавляемой жидкости
-        :return: Объем непоместившейся жидкости
+        :return: Высоту здания
         """
         ...
 
-    def remove_water_from_glass(self, estimate_water: int) -> int:
+    def mean_apartment_area(self) -> float:
         """
-        Извлечение воды из стакана
+        Рассчитывает среднюю площадь квартиры в здании.
 
-        Если количество извлекаемой жидкости превышает количество воды в стакане,
-        то возвращается реальное количество извлеченной воды
+        :return: Средняя площадь квартиры
+        """
+        ...
 
-        :param estimate_water: Объем извлекаемой жидкости
-        :return: Объем реально извлеченной жидкости
+    def settlement(self, number_of_empty_apartments) -> dict:
+        """
+        Заполнить пустые квартиры в доме жителями, возвращает количество новых жителей поквартирно
+
+        Если в доме нет пустых квартир вызывает ошибку с сообщением "дом уже заполнен"
+
+        :param number_of_empty_apartments: Количество пустых квартир
+        :return: количество новых жителей поквартирно
         """
         ...
 
 
 if __name__ == "__main__":
-    glass = Glass(500, 0)  # инициализация экземпляра класса
+    Building_1 = Building(48, 3, 1000, {apt1:1, apt2:6, apt3:0...} )  # инициализация экземпляра класса
