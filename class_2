@@ -1,0 +1,31 @@
+class Road:
+    def __init__(self, road_len: float, surface_type: int, lighting: bool, number_of_lines: int):
+        """
+        Создание и подготовка к работе объекта "Дорога"
+        :param road_len: Длина дороги
+        :param surface_type: Тип дорожного покрытия
+        :param lighting: Наличие освещения
+        :param number_of_lines: Количество полос
+        
+        """
+        self.road_len = road_len
+        self.surface_type = surface_type
+        self.lighting = lighting
+        self.number_of_lines = number_of_lines
+
+    def change_road_len(self) -> float:
+        """
+        Функция которая изменяет длину дороги
+        :return: Новую длину дороги
+        """
+        ...
+
+    def add_lighting(self) -> bool:
+        """
+        Добавление освещения если в экземпляре класса это значение равно False - то есть отсутствует
+        :return: Статус освещенности
+        """
+        ...
+        
+if __name__ == "__main__":
+    Road_1 = Road(500, 1, True, 2)  # инициализация экземпляра класса
