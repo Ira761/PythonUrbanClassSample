@@ -1,0 +1,37 @@
+class Party:
+    def __init__(self, data: str, activity: str, number_of_guests: int):
+        """
+        Создание и подготовка к работе объекта "Стакан"
+        :param data: Дата проведения вечеринки
+        :param activity: Вид активности
+        :param number_of_guests: Количество гостей
+        """
+        self.data = data
+        self.activity = activity
+        self.number_of_guests = number_of_guests
+
+    def is_public_holiday(self, public_holyday) -> bool:
+        """
+        Функция которая проверяет является ли вечеринка государственным праздником
+        :param public_holyday: Список с датами государственных праздников
+        :return: Является ли объект государственным праздником
+        """
+        ...
+
+    def fire_probability(self) -> float:
+        """
+        Вычисляет вероятность наступления пожара на вечеринке в зависимости от того какие виды активности предполагаются и сколько будет гостей 
+        :return: Вероятность наступления пожара в процентном выражении
+        """
+        ...
+
+    def get_name(self) -> str:
+        """
+        Функция которая генерирует название вечеринки в зависимости от даты
+        :return: Название вечеринки
+        """
+        ...
+
+
+if __name__ == "__main__":
+    Birthday = Party("05.05.2022", "swimmingpool", 7)  # инициализация экземпляра класса
